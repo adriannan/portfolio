@@ -48,8 +48,8 @@
 .prlx__title:after {
   content: "";
   position: absolute;
-  top: 0.12em;
-  left: 0.18em;
+  top: 4%;
+  left: 1.1%;
   width: 97%;
   height: 90%;
   border: 1px solid $pink;
@@ -64,9 +64,16 @@
   background-position: 0% 300px;
   height: 150vh;
   z-index: 1;
-  background-image: url(../img/bckg2.jpg);
-  top: 100px;
+  top: 0px;
 }
+#skills-parallax,
+#contact-parallax {
+  background-image: url(../img/bckg2.jpg);
+}
+#projects-parallax {
+  background-image: url(../img/bckg3.jpg);
+}
+
 .hero__title {
   //   font-weight: 400;
   transform: translate(-80%, 20%);
@@ -123,4 +130,82 @@
   font-style: italic;
   text-align: center;
   line-height: 1.6em;
+}
+
+//  SKILLS SECT
+.skills__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid $pink;
+  margin: 0 75px;
+  padding-top: 2.6em;
+}
+.skills__item {
+  color: $pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 15em;
+  max-height: 60vw;
+  margin-top: 2em;
+  padding-bottom: 2em;
+}
+
+.skill__icon {
+  border: 1px solid $pink;
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__icon i {
+  font-size: 4em;
+  padding: 0.5em;
+  line-height: 2em;
+}
+.skill__icon-rwd i {
+  font-size: 3em;
+  transform: rotate(-45deg);
+}
+.skill__title {
+  padding: 1.6em;
+  font-weight: normal;
+  font-style: italic;
+}
+.skill__icon img {
+  width: 55%;
+}
+
+// .skills-item {
+
+// }
+
+.skill-caption {
+  opacity: 1;
+  position: relative;
+  align-self: flex-end;
+  width: 70%;
+  height: 100%;
+  padding-bottom: 0em;
+  margin-left: 1em;
+}
+.skill-icon + h3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25vw;
+  text-align: center;
+  padding: 0;
+}
+
+.projects__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

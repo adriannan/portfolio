@@ -18,6 +18,16 @@ function scrollLoop() {
     yScrollPosition * -0.3 + 500,
     document.querySelector("#skills-parallax")
   );
+  setTranslate(
+    0,
+    yScrollPosition * -0.3 + 800,
+    document.querySelector("#projects-parallax")
+  );
+  setTranslate(
+    0,
+    yScrollPosition * -0.3 + 1300,
+    document.querySelector("#contact-parallax")
+  );
   requestAnimationFrame(scrollLoop);
 }
 

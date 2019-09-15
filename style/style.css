@@ -394,7 +394,8 @@ body {
   background-image: url(../img/bckg1.jpg); }
 
 #skills-parallax {
-  background-image: url(../img/bckg2.jpg); }
+  background-image: url(../img/bckg2.jpg);
+  transform: translateY(-150px); }
 
 .prlx__title {
   position: relative;

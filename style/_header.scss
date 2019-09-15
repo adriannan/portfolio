@@ -1,0 +1,115 @@
+header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100vw;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $cl-whi;
+    filter: opacity(0.9);
+}
+
+.header__logo {
+    color: $c-gre;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-left: 4vw;
+}
+
+.header__logo span {
+    color: $cl-gra;
+    font-style: italic;
+    font-size: 0.6em;
+    padding-left: 1vw;
+    font-weight: lighter;
+}
+
+.header__nav {
+    list-style-type: none;
+    display: flex;
+    padding-right: 4vw;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: $cl-gra;
+    padding-left: 1em;
+}
+
+.nav__item:hover {
+    color: $cl-blu;
+    color: $c-gre;
+}
+
+.header__hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    header {
+
+        min-height: 65px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .header__logo span {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+        position: absolute;
+        right: 1em;
+        height: 1.6em;
+        width: 2em;
+        margin: 0 auto;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        background-color: inherit;
+    }
+
+    .hamburger__line {
+        height: 2px;
+        background-color: $c-gra;
+        position: absolute;
+        width: 100%;
+        transition-duration: 150ms;
+
+    }
+
+    .hamburger__line:nth-child(1) {
+        left: 0px;
+        top: 0px;
+    }
+
+    .hamburger__line:nth-child(2) {
+        left: 0px;
+        opacity: 1;
+        top: .7em;
+    }
+
+    .hamburger__line:nth-child(3) {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .hamburger__line--active .hamburger__line:nth-child(1) {
+        transform: rotate(45deg);
+        top: .7em;
+    }
+
+    .hamburger__line--active .hamburger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger__line--active .hamburger__line:nth-child(3) {
+        transform: rotate(-45deg);
+        top: .7em;
+    }
+}

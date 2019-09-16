@@ -31,6 +31,8 @@ function scrollLoop() {
   requestAnimationFrame(scrollLoop);
 }
 
-window.addEventListener("DOMContentLoaded", scrollLoop);
+Gator(window).on("scroll", scrollLoop);
+
+// window.addEventListener("DOMContentLoaded", scrollLoop);
 
 // setTranslate(0, yScrollPosition * -2, document.querySelector(".hero"));

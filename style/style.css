@@ -360,14 +360,6 @@ body {
 .header__nav {
   display: none; }
 
-.test {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #2a2a2a; }
-
 #hero-parallax {
   content: "";
   width: 100%;
@@ -389,11 +381,11 @@ body {
   background-image: url(../img/bckg3.min.jpg); }
 
 .prlx__title {
+  font-weight: 400;
+  font-style: italic;
   position: relative;
   z-index: 2;
   font-size: 2em;
-  font-weight: normal;
-  font-style: italic;
   color: #c0b283;
   background-color: #fff;
   padding: 1em 2em; }
@@ -407,12 +399,6 @@ body {
   height: 90%;
   border: 1px solid #c0b283; }
 
-.skills__title {
-  color: #f3c6c0; }
-
-.skills__title:after {
-  border: 1px solid #f3c6c0; }
-
 .prlx__wrap {
   position: absolute;
   width: 100%;
@@ -424,6 +410,12 @@ body {
   height: 150vh;
   z-index: 1;
   top: 0px; }
+
+.skills__title {
+  color: #f3c6c0; }
+
+.skills__title:after {
+  border: 1px solid #f3c6c0; }
 
 .hero__title {
   transform: translate(-80%, 40%); }
@@ -444,20 +436,21 @@ body {
   font-size: 2.4em; }
 
 .hero__h3 {
+  font-weight: 400;
+  font-style: italic;
   color: #fff;
   text-transform: capitalize;
-  font-style: italic;
-  font-weight: 400;
   margin: 0.1em 0;
   text-align: end;
   transform: translateX(2em);
   font-size: 1.4em; }
 
 .about__title {
+  font-weight: 400;
+  font-style: italic;
+  top: 1.4em;
   color: #c0b283;
   font-size: 2.6em;
-  font-weight: normal;
-  font-style: italic;
   position: relative;
   margin-bottom: 2em; }
 
@@ -472,12 +465,21 @@ body {
   position: absolute; }
 
 .about__content {
+  font-weight: 400;
+  font-style: italic;
   width: 80%;
   font-size: 1.4em;
-  font-weight: 300;
-  font-style: italic;
   text-align: center;
   line-height: 1.6em; }
+
+.about__btn {
+  font-weight: 400;
+  font-style: italic;
+  color: #c0b283;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  border: 1px solid #c0b283;
+  transition: 0.2s ease-out; }
 
 .skills__content {
   display: flex;
@@ -488,11 +490,11 @@ body {
   padding-top: 2.6em; }
 
 .skills__item {
-  color: #f3c6c0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #f3c6c0;
+  flex-direction: column;
   min-width: 15em;
   width: 25%;
   max-height: 60vw;
@@ -500,14 +502,14 @@ body {
   padding-bottom: 2em; }
 
 .skill__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #f3c6c0;
   border-radius: 50%;
   width: 7em;
   height: 7em;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  overflow: hidden; }
 
 .skill__icon i {
   font-size: 4em;
@@ -519,29 +521,12 @@ body {
   transform: rotate(-45deg); }
 
 .skill__title {
-  padding: 1.6em;
-  font-weight: normal;
-  font-style: italic; }
+  font-weight: 400;
+  font-style: italic;
+  padding: 1.6em; }
 
 .skill__icon img {
   width: 55%; }
-
-.skill-caption {
-  opacity: 1;
-  position: relative;
-  align-self: flex-end;
-  width: 70%;
-  height: 100%;
-  padding-bottom: 0em;
-  margin-left: 1em; }
-
-.skill-icon + h3 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 25vw;
-  text-align: center;
-  padding: 0; }
 
 .projects__content {
   display: flex;
@@ -556,17 +541,17 @@ body {
   margin-bottom: 75px; }
 
 .projects__btn {
+  font-weight: 400;
+  font-style: italic;
   width: 9em;
   font-size: 1.4em;
-  font-weight: normal;
-  font-style: italic;
   color: #c0b283;
   background-color: #fff;
   padding: 1em 2em;
   border: 1px solid #c0b283;
-  transition: linear 0.1s; }
+  transition: 0.2s ease-out; }
 
-.projects__btn:hover {
+.projects__btn:hover, .about__btn:hover {
   cursor: pointer;
   background-color: #c0b283;
   color: #fff;
@@ -584,7 +569,7 @@ body {
   bottom: 0;
   left: 35%;
   opacity: 0;
-  transition: linear 0.1s; }
+  transition: 0.2s ease-out; }
 
 .projects__item:hover:after {
   opacity: 1; }
@@ -594,10 +579,10 @@ body {
   position: relative; }
 
 .projects__item-tit {
+  font-weight: 400;
+  font-style: italic;
   font-size: 1.6em;
   padding: 1em 2em;
-  font-weight: normal;
-  font-style: italic;
   color: #c0b283;
   text-align: center; }
 
@@ -613,12 +598,12 @@ body {
   color: #c0b283;
   font-size: 2em;
   padding: 0.6em;
-  transition: linear 0.1s; }
+  transition: 0.2s ease-out; }
 
 .projects__links i:hover {
   color: white;
   text-shadow: 0 0 5px #c0b283;
-  transition: linear 0.1s; }
+  transition: 0.2s ease-out; }
 
 .contact__content {
   justify-content: space-between;
@@ -628,7 +613,6 @@ body {
 
 .contact__content {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center; }
 
@@ -644,16 +628,13 @@ body {
   text-decoration: none;
   transition: 0.2s ease-out; }
 
-.contact-item:hover {
-  opacity: 1;
+.contact__item:hover .contact__item-link i {
+  color: white;
+  text-shadow: 0 0 5px #c0b283;
   transition: 0.2s ease-out; }
 
-.contact-item:hover a {
-  cursor: pointer; }
-
-.contact-item:hover i,
-.contact-item:hover p {
-  transform: scale(1.1);
+.contact__item:hover i {
+  transform: scale(1.05);
   transition: 0.2s ease-out; }
 
 .contact__item-data {
@@ -670,28 +651,30 @@ body {
   font-size: 2em; }
 
 .contact__item-tit {
+  font-weight: 400;
+  font-style: italic;
   text-transform: capitalize;
-  font-size: 1.4em;
-  font-weight: normal;
-  font-style: italic; }
+  font-size: 1.4em; }
 
 .contact__item,
 .contact__item-link {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 10vh;
   min-height: 5em;
   font-size: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   color: #c0b283;
-  border-top: 1px solid #c0b283; }
+  border-top: 1px solid #c0b283;
+  position: relative;
+  z-index: 5;
+  overflow: hidden; }
 
 .prlx-footer {
   background-image: url(../img/bckg2.min.jpg);
@@ -699,12 +682,6 @@ body {
   background-position: center;
   max-height: 10vh;
   transform: scale(1.1); }
-
-.footer {
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.3); }
 
 .copyright {
   position: relative;

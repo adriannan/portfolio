@@ -3,17 +3,7 @@
   display: none;
 }
 
-.test {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  // height: 1px;
-  // height: 0.1em;
-  // padding: 0.5em;
-  width: 100%;
-  background-color: $gray;
-}
+// PARALAX BCKG
 
 #hero-parallax {
   content: "";
@@ -21,7 +11,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  //   filter: blur(2px);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,11 +27,10 @@
   background-image: url(../img/bckg3.min.jpg);
 }
 .prlx__title {
+  @include fontStyle;
   position: relative;
   z-index: 2;
   font-size: 2em;
-  font-weight: normal;
-  font-style: italic;
   color: $gold;
   background-color: #fff;
   padding: 1em 2em;
@@ -56,12 +44,6 @@
   height: 90%;
   border: 1px solid $gold;
 }
-.skills__title {
-  color: $pink;
-}
-.skills__title:after {
-  border: 1px solid $pink;
-}
 .prlx__wrap {
   position: absolute;
   width: 100%;
@@ -74,6 +56,15 @@
   z-index: 1;
   top: 0px;
 }
+
+.skills__title {
+  color: $pink;
+}
+.skills__title:after {
+  border: 1px solid $pink;
+}
+
+// HERO
 
 .hero__title {
   //   font-weight: 400;
@@ -95,21 +86,22 @@
   font-size: 2.4em;
 }
 .hero__h3 {
+  @include fontStyle;
   color: #fff;
   text-transform: capitalize;
-  font-style: italic;
-  font-weight: 400;
   margin: 0.1em 0;
   text-align: end;
   transform: translateX(2em);
   font-size: 1.4em;
 }
 
+// ABOUT SECT
+
 .about__title {
+  @include fontStyle;
+  top: 1.4em;
   color: $gold;
   font-size: 2.6em;
-  font-weight: normal;
-  font-style: italic;
   position: relative;
   margin-bottom: 2em;
 }
@@ -125,12 +117,23 @@
 }
 
 .about__content {
+  @include fontStyle;
   width: 80%;
   font-size: 1.4em;
-  font-weight: 300;
-  font-style: italic;
   text-align: center;
   line-height: 1.6em;
+}
+
+.about__btn {
+  @include fontStyle;
+  color: $gold;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  border: 1px solid $gold;
+  transition: $trans;
+}
+.about__btn:hover {
+  @extend .projects__btn:hover;
 }
 
 //  SKILLS SECT
@@ -143,11 +146,9 @@
   padding-top: 2.6em;
 }
 .skills__item {
+  @include flex;
   color: $pink;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-width: 15em;
   width: 25%;
   max-height: 60vw;
@@ -156,14 +157,12 @@
 }
 
 .skill__icon {
+  @include flex;
   border: 1px solid $pink;
   border-radius: 50%;
   width: 7em;
   height: 7em;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .skill__icon i {
@@ -176,41 +175,35 @@
   transform: rotate(-45deg);
 }
 .skill__title {
+  @include fontStyle;
   padding: 1.6em;
-  font-weight: normal;
-  font-style: italic;
 }
 .skill__icon img {
   width: 55%;
 }
 
-// .skills-item {
-
+// .skill-caption {
+//   opacity: 1;
+//   position: relative;
+//   align-self: flex-end;
+//   width: 70%;
+//   height: 100%;
+//   padding-bottom: 0em;
+//   margin-left: 1em;
+// }
+// .skill-icon + h3 {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 25vw;
+//   text-align: center;
+//   padding: 0;
 // }
 
-.skill-caption {
-  opacity: 1;
-  position: relative;
-  align-self: flex-end;
-  width: 70%;
-  height: 100%;
-  padding-bottom: 0em;
-  margin-left: 1em;
-}
-.skill-icon + h3 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 25vw;
-  text-align: center;
-  padding: 0;
-}
-//  PROJECTS
+//  PROJECTS SECT
 
 .projects__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
 }
 .projects__btns {
   width: 80%;
@@ -221,24 +214,22 @@
 }
 
 .projects__btn {
-  // position: relative;
-  // z-index: 2;
+  @include fontStyle;
   width: 9em;
   font-size: 1.4em;
-  font-weight: normal;
-  font-style: italic;
   color: $gold;
   background-color: #fff;
   padding: 1em 2em;
   border: 1px solid $gold;
-  transition: linear 0.1s;
+  transition: $trans;
 }
+
 .projects__btn:hover {
   cursor: pointer;
   background-color: $gold;
   color: #fff;
   opacity: 0.8;
-  // transition: linear 0.1s;
+  // transition: $trans;
 }
 .projects__item {
   position: relative;
@@ -252,29 +243,21 @@
   bottom: 0;
   left: 35%;
   opacity: 0;
-  transition: linear 0.1s;
+  transition: $trans;
 }
 .projects__item:hover:after {
   opacity: 1;
-  // transition: linear 0.1s;
+  // transition: $trans;
 }
 .projects__item img {
   margin: 1em;
   position: relative;
-  // transition: linear 0.2s;
-  // filter: grayscale(100%) blur(0.5px);
-}
-.projects__item:hover img {
-  // transform: scale(1.05);
-  // transition: linear 0.2s;
-  // filter: grayscale(0%) blur(0px);
 }
 
 .projects__item-tit {
+  @include fontStyle;
   font-size: 1.6em;
   padding: 1em 2em;
-  font-weight: normal;
-  font-style: italic;
   color: $gold;
   text-align: center;
 }
@@ -290,17 +273,15 @@
   color: $gold;
   font-size: 2em;
   padding: 0.6em;
-  transition: linear 0.1s;
+  transition: $trans;
 }
 .projects__links i:hover {
-  // color: $pink;
-  // filter: sepia(130%);
-  // filter: brightness(130%);
   color: white;
   text-shadow: 0 0 5px $gold;
-  transition: linear 0.1s;
+  transition: $trans;
 }
-// CONTACT
+
+// CONTACT SECT
 
 .contact__content {
   justify-content: space-between;
@@ -309,10 +290,7 @@
   font-family: "baskerville", serif;
 }
 .contact__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex;
 }
 
 .contact__item {
@@ -325,22 +303,19 @@
   font-size: 1.4em;
   text-align: center;
   text-decoration: none;
-  transition: 0.2s ease-out;
+  transition: $trans;
 }
 
-.contact-item:hover {
-  opacity: 1;
-  transition: 0.2s ease-out;
+.contact__item:hover .contact__item-link i {
+  color: white;
+  text-shadow: 0 0 5px $gold;
+  // transition: $trans;
+  transition: $trans;
 }
 
-.contact-item:hover a {
-  cursor: pointer;
-}
-
-.contact-item:hover i,
-.contact-item:hover p {
-  transform: scale(1.1);
-  transition: 0.2s ease-out;
+.contact__item:hover i {
+  transform: scale(1.05);
+  transition: $trans;
 }
 
 .contact__item-data {
@@ -366,44 +341,35 @@
 }
 
 .contact__item-tit {
+  @include fontStyle;
   text-transform: capitalize;
   font-size: 1.4em;
-  font-weight: normal;
-  font-style: italic;
 }
 .contact__item,
 .contact__item-link {
-  display: flex;
+  @include flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
+// FOOTER
+
 .footer {
+  @include flex;
   height: 10vh;
   min-height: 5em;
   font-size: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   color: $gold;
   border-top: 1px solid $gold;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
 }
-
 .prlx-footer {
   background-image: url(../img/bckg2.min.jpg);
   background-size: cover;
   background-position: center;
   max-height: 10vh;
   transform: scale(1.1);
-}
-
-.footer {
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .copyright {

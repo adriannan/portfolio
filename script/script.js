@@ -24,7 +24,7 @@ function scrollLoop() {
   );
   setBckgPosition(
     0,
-    yScrollPosition * -0.3 + 400,
+    yScrollPosition * -0.3 + 300,
     document.querySelector("#skills-parallax")
   );
   setBckgPosition(
@@ -34,7 +34,7 @@ function scrollLoop() {
   );
   setBckgPosition(
     0,
-    yScrollPosition * -0.3 + 1300,
+    yScrollPosition * -0.3 + 1100,
     document.querySelector("#contact-parallax")
   );
   requestAnimationFrame(scrollLoop);

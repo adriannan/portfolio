@@ -1,8 +1,3 @@
-.header__logo,
-.header__nav {
-  display: none;
-}
-
 // PARALAX BCKG
 
 #hero-parallax {
@@ -228,8 +223,14 @@
   cursor: pointer;
   background-color: $gold;
   color: #fff;
-  opacity: 0.8;
+  // opacity: 0.8;
   // transition: $trans;
+}
+.projects__btn-active {
+  cursor: pointer;
+  background-color: $gold;
+  color: #fff;
+  opacity: 0.8;
 }
 .projects__item {
   position: relative;
@@ -308,8 +309,8 @@
 
 .contact__item:hover .contact__item-link i {
   color: white;
+
   text-shadow: 0 0 5px $gold;
-  // transition: $trans;
   transition: $trans;
 }
 

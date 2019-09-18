@@ -297,6 +297,112 @@ template {
 [hidden] {
   display: none; }
 
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  min-height: 75px; }
+
+.header__logo {
+  position: fixed;
+  top: 1em;
+  left: 1em; }
+
+.header__logo-wrap img {
+  width: 3em; }
+
+.header__nav {
+  font-size: 1.4em;
+  color: #2a2a2a;
+  position: fixed; }
+
+.header__nav-right {
+  top: 45%;
+  right: 20%;
+  transform: translate(45%, -20%);
+  line-height: 1.4em; }
+
+.header__nav-left {
+  top: 4em;
+  left: -0.25em;
+  transform: translate(0%, 0%);
+  line-height: 1em; }
+
+.header__nav-left ul {
+  padding-left: 1em; }
+
+.header__nav ul {
+  list-style-type: none;
+  margin: 0; }
+
+.nav__item {
+  width: 10em;
+  position: relative;
+  cursor: pointer; }
+
+.nav__item-right {
+  text-align: end;
+  height: 1.4em; }
+
+.nav__item-left:hover {
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 1em;
+  width: 7.4em; }
+
+.nav__item-left {
+  text-align: start;
+  height: 1em; }
+
+.nav__item-left a {
+  color: #c0b283;
+  left: 2.8em;
+  font-size: 0.6em; }
+
+.nav__item-right a {
+  color: #2a2a2a;
+  right: 2.4em;
+  font-size: 0.8em; }
+
+.nav__item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  width: 10em; }
+
+.nav__item span {
+  opacity: 0; }
+
+.nav__item:hover span {
+  opacity: 1; }
+
+.nav__item a::after {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 48%;
+  position: absolute;
+  opacity: 1; }
+
+.nav__item-right a::after {
+  border: 1px solid #2a2a2a;
+  right: -1.6em;
+  top: 0.6em; }
+
+.nav__item-left a::after {
+  border: 1px solid #c0b283;
+  left: -1.4em;
+  top: 0.45em; }
+
+.nav__item-right:hover a::after {
+  background-color: #2a2a2a; }
+
+.nav__item-left:hover a::after {
+  background-color: #c0b283; }
+
+.nav__item:hover a {
+  opacity: 1; }
+
 html {
   height: 100%;
   box-sizing: border-box; }
@@ -327,7 +433,7 @@ body {
   margin-top: 0px;
   justify-content: center;
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   max-height: 1200px;
   min-height: 200px;
   position: relative;
@@ -355,10 +461,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden; }
-
-.header__logo,
-.header__nav {
-  display: none; }
 
 #hero-parallax {
   content: "";
@@ -552,6 +654,11 @@ body {
   transition: 0.2s ease-out; }
 
 .projects__btn:hover, .about__btn:hover {
+  cursor: pointer;
+  background-color: #c0b283;
+  color: #fff; }
+
+.projects__btn-active {
   cursor: pointer;
   background-color: #c0b283;
   color: #fff;

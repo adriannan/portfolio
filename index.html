@@ -17,7 +17,6 @@
 			</head>
 <body>
 	<header>
-		<div class="test">		</div>
 		<a class="header__logo" href="#hero" name="logo">
 			<div class="header__logo-wrap">
 				<img src="img/logoAR.png" alt="logo">
@@ -48,7 +47,7 @@
 			</div>
 			<div class="about__caption">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris. Odio ut enim blandit volutpat. Nulla facilisi cras fermentum odio eu.</p>
-				<p id="about-more" class="more">Massa ultricies mi quis hendrerit dolor magna eget. Nibh sed pulvinar proin gravida hendrerit lectus. Ac turpis egestas integer eget aliquet nibh praesent. Lorem donec massa sapien faucibus. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.</p><button id="about-button" class="button-def">więcej</button>
+				<p id="about-more" class="more">Massa ultricies mi quis hendrerit dolor magna eget. Nibh sed pulvinar proin gravida hendrerit lectus. Ac turpis egestas integer eget aliquet nibh praesent. Lorem donec massa sapien faucibus. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.</p><button id="about-button" class="about__btn">Więcej</button>
 			</div>
 		</div>							
 	</section>
@@ -132,25 +131,24 @@
 		</div>
 	<section class="projects" id="projects">
 		<div class="projects__btns">
-			<button class="projects__btn">Strony</button>
-			<button class="projects__btn">One-page</button>
-			<button class="projects__btn">Aplikacje</button>
-			<button class="projects__btn">Mini-gry</button>
+			<button class="projects__btn site" data-cat="site">Strony</button>
+			<button class="projects__btn" data-cat="page">One-page</button>
+			<button class="projects__btn" data-cat="app">Aplikacje</button>
+			<button class="projects__btn" data-cat="game">Mini-gry</button>
 		</div>			
 		<div class="projects__content">
-			<div class="projects__item">
+			<div class="projects__item site">
 				<img src="img/pro-8.min.jpg" alt="project">
-				
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Kwiaciarnia</h3>
-					<p>HTML &sdot; jQuery &sdot; CSS/BEM</p>
+					<p>HTML &sdot; CSS/BEM</p>
 					<div class="projects__links">
 						<a href="https://adriannan.github.io/kwiaciarnia/" target="_blank" name="link-page-kwiaciarnia" ><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/kwiaciarnia" target="_blank" name="link-gith-kwiaciarnia" ><i class="fab fa-github"></i></a>
 					</div>						
 				</div>
 			</div>
-			<div class="projects__item"><img src="img/pro-2.min.jpg" alt="project">
+			<div class="projects__item page"><img src="img/pro-2.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Weekly Web Dev Challenge&nbsp;3</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
@@ -160,7 +158,7 @@
 					</div>						
 				</div>
 			</div>
-			<div class="projects__item"><img src="img/pro-1.min.jpg" alt="project">
+			<div class="projects__item page"><img src="img/pro-1.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Weekly Web Dev Challenge&nbsp;28</h3>
 					<p>HTML &sdot; CSS &sdot; Bootstrap4 &sdot; jQuery &sdot; RWD</p>
@@ -170,66 +168,66 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="projects-item"><img src="images/pro-3.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item site"><img src="img/pro-3.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Portfolio</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/portfolio/#" target="_blank" name="link-page-portfolio"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/portfolio" target="_blank" name="link-gith-portfolio"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects-item"><img src="images/pro-5.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item game"><img src="img/pro-5.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Rock Paper Scissors Game</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/RPS-Game/" target="_blank" name="link-page-rpsgame"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/RPS-Game" target="_blank" name="link-gith-rpsgame"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects-item"><img src="images/pro-6.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item game"><img src="img/pro-6.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Color Game</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/color-game/" target="_blank" name="link-page-colorgame"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/color-game" target="_blank" name="link-gith-colorgame"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects-item"><img src="images/pro-7.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item app"><img src="img/pro-7.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Countdown Timer</h3>
 					<p>HTML &sdot; CSS &sdot; JS/ES6</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/countdown-timer/" target="_blank" name="link-page-timer"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/countdown-timer" target="_blank" name="link-gith-timer"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects-item"><img src="images/pro-9.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item app"><img src="img/pro-9.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Stopwatch</h3>
 					<p>HTML &sdot; CSS &sdot; JS/ES6</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/stopwatch/" target="_blank" name="link-page-stopwatch"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/stopwatch" target="_blank" name="link-gith-stopwatch"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects-item"><img src="images/pro-4.min.jpg" alt="project">
-				<div class="projects-item-wrapper">
+			<div class="projects__item app"><img src="img/pro-4.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">To Do List</h3>
 					<p>HTML &sdot; CSS &sdot; jQuery</p>
-					<div class="class="projects__links">
+					<div class="projects__links">
 						<a href="https://adriannan.github.io/todo-list/" target="_blank" name="link-page-todolist"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/todo-list" target="_blank" name="link-gith-todolist"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</section>
 	<div class="prlx__section">			
@@ -276,6 +274,7 @@
 
 	<script type="text/javascript" src="script/gator.min.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
+	<script type="text/javascript" src="script/filter.js"></script>
 	<!-- <script type="text/javascript" src="scripts/script.min.js"></script> -->
 </body>
 </html>

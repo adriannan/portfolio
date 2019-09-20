@@ -6,6 +6,7 @@ header {
 }
 
 .header__logo {
+  visibility: hidden;
   position: fixed;
   top: 1em;
   left: 1em;
@@ -44,26 +45,26 @@ header {
   position: relative;
   cursor: pointer;
 }
-.nav__item-right {
+.header__nav-right .nav__item {
   text-align: end;
   height: 1.4em;
 }
-.nav__item-left:hover {
+.header__nav-left .nav__item:hover {
   background-color: #fff;
   opacity: 0.8;
   border-radius: 1em;
   width: 7.4em;
 }
-.nav__item-left {
+.header__nav-left .nav__item {
   text-align: start;
   height: 1em;
 }
-.nav__item-left a {
+.header__nav-left .nav__item a {
   color: $gold;
   left: 2.8em;
   font-size: 0.6em;
 }
-.nav__item-right a {
+.header__nav-right .nav__item a {
   color: $gray;
   right: 2.4em;
   font-size: 0.8em;
@@ -74,11 +75,22 @@ header {
   position: absolute;
   width: 10em;
 }
-.nav__item span {
+.header__nav-right .nav__item span {
   opacity: 0;
+  display: block;
+  transform: translateX(40%) rotateY(90deg);
 }
+.header__nav-left .nav__item span {
+  opacity: 0;
+  display: block;
+  transform: translateY(40%) rotateY(90deg);
+}
+
 .nav__item:hover span {
   opacity: 1;
+  transform: none;
+
+  transition: 0.2s ease-in opacity, 0.1s ease-out transform;
 }
 
 .nav__item a::after {
@@ -89,12 +101,12 @@ header {
   position: absolute;
   opacity: 1;
 }
-.nav__item-right a::after {
+.header__nav-right .nav__item a::after {
   border: 1px solid $gray;
   right: -1.6em;
   top: 0.6em;
 }
-.nav__item-left a::after {
+.header__nav-left .nav__item a::after {
   border: 1px solid $gold;
 
   left: -1.4em;
@@ -102,11 +114,11 @@ header {
   top: 0.45em;
 }
 
-.nav__item-right:hover a::after {
+.header__nav-right .nav__item:hover a::after {
   //   opacity: 0;
   background-color: $gray;
 }
-.nav__item-left:hover a::after {
+.header__nav-left .nav__item:hover a::after {
   //   opacity: 0;
   background-color: $gold;
 }

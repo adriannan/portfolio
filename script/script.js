@@ -1,74 +1,48 @@
-const navItem = [...document.querySelectorAll(".nav__item")];
+const prlxDivs = [...document.querySelectorAll(".prlx__section")];
+
 const nav = document.querySelector("#header-nav");
+const navRight = document.querySelector(".header__nav-right");
 const logo = document.querySelector(".header__logo");
 const aboutSec = document.querySelector("#about");
 
 function changeNav() {
-  if (aboutSec.getBoundingClientRect().top < window.innerHeight / 2) {
+  if (document.querySelector("#hero").offsetHeight / 2 < window.scrollY) {
+    // if (aboutSec.getBoundingClientRect().top < window.innerHeight / 2 + 110) {
     logo.style.visibility = "visible";
     nav.classList.add("header__nav-left");
     nav.classList.remove("header__nav-right");
-    navItem.forEach(item => {
-      item.classList.add("nav__item-left");
-      item.classList.remove("nav__item-right");
-    });
   } else {
     logo.style.visibility = "hidden";
     nav.classList.remove("header__nav-left");
     nav.classList.add("header__nav-right");
-    navItem.forEach(item => {
-      item.classList.remove("nav__item-left");
-      item.classList.add("nav__item-right");
-    });
   }
 }
 
 // MOVING HERO TITTLE ON SCROLL
-function setBckgPosition(xPos, yPos, el) {
-  el.style.backgroundPosition = xPos + "px " + yPos + "px";
-}
 
 function setTranslate(xPos, yPos, el) {
   el.style.transform = "translate3d(" + xPos + "%, " + yPos + "%, 0)";
 }
 
 function scrollLoop() {
-  let yScrollPosition = window.scrollY;
-  if (yScrollPosition < 1000) {
-    changeNav();
-    setBckgPosition(
-      0,
-      yScrollPosition * -0.3,
-      document.querySelector("#hero-parallax")
-    );
-    setTranslate(
-      yScrollPosition * -0.1,
-      yScrollPosition * -0.1,
-      document.querySelector("#hero")
-      // document.querySelector(".hero__title")
-    );
-  } else {
-    setBckgPosition(
-      0,
-      yScrollPosition * -0.3 + 300,
-      document.querySelector("#skills-parallax")
-    );
-    setBckgPosition(
-      0,
-      yScrollPosition * -0.3 + 900,
-      document.querySelector("#projects-parallax")
-    );
-    setBckgPosition(
-      0,
-      yScrollPosition * -0.3 + 1300,
-      document.querySelector("#contact-parallax")
-    );
+  let yScroll = window.scrollY;
+  let vHeight = window.innerHeight;
+  changeNav();
+  setTranslate(yScroll * -0.1, yScroll * -0.1, document.querySelector("#hero"));
+  // parallax function
+
+  for (let i = 0; i < prlxDivs.length; i++) {
+    let divOffTop = prlxDivs[i].offsetTop;
+    let divHeight = prlxDivs[i].offsetHeight;
+    if (divOffTop < yScroll + vHeight && divOffTop + divHeight > yScroll) {
+      prlxDivs[i].style.backgroundPosition =
+        "0px " + Math.round(((divOffTop - yScroll) * 3) / 8) + "px";
+    }
   }
-  requestAnimationFrame(scrollLoop);
 }
 
 Gator(window).on("scroll", scrollLoop);
 
 // window.addEventListener("DOMContentLoaded", scrollLoop);
 
-// setBckgPosition(0, yScrollPosition * -2, document.querySelector(".hero"));
+// setBckgPosition(0, yScroll * -2, document.querySelector(".hero"));

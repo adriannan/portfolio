@@ -80,31 +80,34 @@ header {
   display: block;
   transform: translateX(40%) rotateY(90deg);
 }
+
 .header__nav-left .nav__item span {
   opacity: 0;
   display: block;
   transform: translateY(40%) rotateY(90deg);
 }
-
+.header__nav-left .nav__item,
+.header__nav-left .nav__item a {
+  width: 5em;
+}
 .nav__item:hover span {
   opacity: 1;
   transform: none;
-
   transition: 0.2s ease-in opacity, 0.1s ease-out transform;
 }
 
 .nav__item a::after {
   content: "";
-  width: 0.4em;
-  height: 0.4em;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 48%;
   position: absolute;
   opacity: 1;
 }
 .header__nav-right .nav__item a::after {
-  border: 1px solid $gray;
+  border: 1.5px solid $gray;
   right: -1.6em;
-  top: 0.6em;
+  top: 0.5em;
 }
 .header__nav-left .nav__item a::after {
   border: 1px solid $gold;

@@ -24,10 +24,10 @@
 		</a>
 		<nav id="header-nav" class="header__nav header__nav-right">
 			<ul>
-				<li class="nav__item nav__item-right"><a href="#about" name="nav-about"><span>o mnie</span></i></a></li>
-				<li class="nav__item nav__item-right"><a href="#skills-parallax" name="nav-skills"><span>umiejętności</span></i></a></li>
-				<li class="nav__item nav__item-right"><a href="#projects-parallax" name="nav-projects"><span>projekty</span></i></a></li>
-				<li class="nav__item nav__item-right"><a href="#contact-parallax" name="nav-contact"><span>kontakt</span></i></a></li>
+				<li class="nav__item"><a href="#about" name="nav-about"><span>o mnie</span></i></a></li>
+				<li class="nav__item"><a href="#skills-parallax" name="nav-skills"><span>umiejętności</span></i></a></li>
+				<li class="nav__item"><a href="#projects-parallax" name="nav-projects"><span>projekty</span></i></a></li>
+				<li class="nav__item"><a href="#contact-parallax" name="nav-contact"><span>kontakt</span></i></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -46,8 +46,16 @@
 				<!-- <img src=# alt="Adrianna Rochmalska"> -->
 			</div>
 			<div class="about__caption">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris. Odio ut enim blandit volutpat. Nulla facilisi cras fermentum odio eu.</p>
-				<p id="about-more" class="more">Massa ultricies mi quis hendrerit dolor magna eget. Nibh sed pulvinar proin gravida hendrerit lectus. Ac turpis egestas integer eget aliquet nibh praesent. Lorem donec massa sapien faucibus. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.</p><button id="about-button" class="about__btn">Więcej</button>
+				<p>Lubię tworzyć, poznawać, rozwijać się i uczyć.</p>
+				<p>Grafika komputerowa od zawsze mnie pochłaniała, psychologia interesowała, a&nbsp;gry&nbsp;i&nbsp;zadania logiczne były formą odpoczynku. Front-end fenomenalnie to&nbsp;wszystko łączy -&nbsp;strona oprócz wyglądu i&nbsp;funkcjonalności powinna także spełniać standardy&nbsp;UX.</p>
+			<div id="about-more" class="about__caption-visible">
+				<div class="about__photo">
+					<img src="img/AR.jpg" alt="Adrianna Rochmalska">
+				</div>
+				<p>Wiedzę czerpię z&nbsp;różnych dostępnych źródeł: kursy, tutoriale, książki, fora. Szukając rozwiązań przemierzam czeluście Internetu i&nbsp;z&nbsp;samozaparciem dążę do&nbsp;kolejnych sukcesów! Kolejny junior na&nbsp;horyzoncie frontendu? Tak&nbsp;jest! Jednak od&nbsp;czegoś trzeba&nbsp;zacząć&nbsp;:)</p>
+			</div>
+
+				<button id="about-button" class="about__btn">Więcej</button>
 			</div>
 		</div>							
 	</section>
@@ -57,72 +65,95 @@
 	  </div>
 	<section class="skills" id="skills">
 		<div class="skills__content">
-			<div class="skills__item skills-1">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-html5"></i>
 				</div>
 				<h3 class="skill__title">HTML5</h3>
+				<div class="skill__caption">
+					<p>Uwzględniam semantykę przy tworzeniu stron, by&nbsp;kod był bardziej dostępny i&nbsp;łatwiejszy w&nbsp;utrzymaniu</p>
+				</div>
 			</div>
-			<div class="skills__item skills-2">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-css3-alt"></i>
 				</div>
 				<h3 class="skill__title">CSS3</h3>	
+				<div class="skill__caption">
+					<p>Komponuję modularny kod CSS, w&nbsp;oparciu o&nbsp;metodykę BEM</p>
+					<p>Tworzę strony RWD, bazując na&nbsp;media queries, flexboxie i&nbsp;jednostkach względnych</p>
+				</div>
 			</div>		
-			<div class="skills__item skills-3">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-sass"></i>
 				</div>
 				<h3 class="skill__title">SASS</h3>
+				<div class="skill__caption">
+					<p>Korzystam z preprocesora do usprawnienia pracy, opieram&nbsp;się na&nbsp;składni SCSS </p>
+				</div>
 			</div>		
-			<div class="skills__item skills-4">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-js-square"></i>
 				</div>
 				<h3 class="skill__title">JavaScript</h3>		
+				<div class="skill__caption">
+					<p>Korztsam ze standardów ES6</p>
+					<p>Obecnie zapoznaję&nbsp;się z&nbsp;frameworkiem React</p>
+				</div>
 			</div>		
-			<div class="skills__item skills-5">
+			<div class="skills__item ">
 				<div class="skill__icon">
 					<img src="img/icon-jq.min.png" alt="jQuery">
 				</div>
 				<h3 class="skill__title">jQuery</h3>
 			</div>		
-			<div class="skills__item skills-6">
+			<div class="skills__item ">
 				<div class="skill__icon">
 					<img src="img/icon-boot2.min.png"  alt="Bootstrap">
 				</div>
-				<h3 class="skill__title">Bootstrap</h3>
+				<h3 class="skill__title">Bootstrap</h3>					
 			</div>
-			<div class="skills__item skills-7">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-github"></i>
 				</div>
 				<h3 class="skill__title">Git/Github</h3>
+				<div class="skill__caption">
+					<p>Korzystam z repozytorium do udostępniania projektów i tworzenia kopii zapasowej</p>
+				</div>
 			</div>
-			<div class="skills__item skills-8">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<i class="fab fa-npm"></i>
 				</div>
 				<h3 class="skill__title">NPM</h3>
+				<div class="skill__caption">
+					<p>Task runner usprawnia tworzenie stron, korzystam&nbsp;m.in. z&nbsp;browser&nbsp;-&nbsp;sync, kompilacji&nbsp;sass oraz&nbsp;autoprefixera</p>
+				</div>
 			</div>
-			<div class="skills__item skills-9">
+			<div class="skills__item skills__item-capt">
 				<div class="skill__icon">
 					<img src="img/icon-gimp.min.png" alt="GIMP">
 				</div>
-				<h3 class="skill__title">Gimp</h3>			
+				<h3 class="skill__title">Gimp</h3>	
+				<div class="skill__caption">
+					<p> cięcie layoutu psd </p>
+					<p> obróbka grafiki </p>
+					<p> strefa twórczości </p>
+				</div>			
+
 			</div>
-			<div class="skills__item skills-10">
-				<div class="skill__icon skill__icon-rwd">
-					<i class="fas fa-arrows-alt-h"></i>
-				</div>
-				<h3 class="skill__title">RWD</h3>
-			</div>		
-			<div class="skills__item skills-11">
+			<!-- <div class="skills__item ">
 				<div class="skill__icon">
 					<i class="fas fa-tasks"></i>
 				</div>
 				<h3 class="skill__title">stały rozwój ...</h3>
-			</div>
+				<div class="skill__caption">
+									<p>ok</p>
+				</div>
+			</div> -->
 		</div>
 	</section>
 	<div class="prlx__section prlx__wrap" id="projects-parallax">			
@@ -137,7 +168,7 @@
 			<button class="projects__btn" data-cat="game">Mini-gry</button>
 		</div>			
 		<div class="projects__content">
-			<div class="projects__item site">
+			<div class="projects__item site" >
 				<img src="img/pro-8.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Kwiaciarnia</h3>
@@ -148,7 +179,18 @@
 					</div>						
 				</div>
 			</div>
-			<div class="projects__item page"><img src="img/pro-2.min.jpg" alt="project">
+			<div class="projects__item site" >
+				<img src="img/pro-10.min.jpg" alt="project">
+				<div class="projects__item-wrapper">
+					<h3 class="projects__item-tit">Usługi ślusarskie</h3>
+					<p>HTML &sdot; CSS/BEM/SASS &sdot; JavaScript</p>
+					<div class="projects__links">
+						<a href="https://adriannan.github.io/ewmet/" target="_blank" name="link-page-slusarz" ><i class="far fa-eye"></i></a>
+						<a href="https://github.com/adriannan/ewmet" target="_blank" name="link-gith-slusarz" ><i class="fab fa-github"></i></a>
+					</div>						
+				</div>
+			</div>
+			<div class="projects__item page" ><img src="img/pro-2.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Weekly Web Dev Challenge&nbsp;3</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
@@ -158,7 +200,7 @@
 					</div>						
 				</div>
 			</div>
-			<div class="projects__item page"><img src="img/pro-1.min.jpg" alt="project">
+			<div class="projects__item page" ><img src="img/pro-1.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Weekly Web Dev Challenge&nbsp;28</h3>
 					<p>HTML &sdot; CSS &sdot; Bootstrap4 &sdot; jQuery &sdot; RWD</p>
@@ -168,17 +210,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects__item site"><img src="img/pro-3.min.jpg" alt="project">
+			<div class="projects__item page" ><img src="img/pro-11.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Portfolio</h3>
-					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
+					<p>HTML &sdot; CSS/SASS &sdot; JavaScript &sdot; RWD</p>
 					<div class="projects__links">
-						<a href="https://adriannan.github.io/portfolio/#" target="_blank" name="link-page-portfolio"><i class="far fa-eye"></i></a>
+						<a href="https://adriannan.github.io/portfolio" target="_blank" name="link-page-portfolio"><i class="far fa-eye"></i></a>
 						<a href="https://github.com/adriannan/portfolio" target="_blank" name="link-gith-portfolio"><i class="fab fa-github"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="projects__item game"><img src="img/pro-5.min.jpg" alt="project">
+			<div class="projects__item game" ><img src="img/pro-5.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Rock Paper Scissors Game</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript &sdot; RWD</p>
@@ -188,7 +230,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects__item game"><img src="img/pro-6.min.jpg" alt="project">
+			<div class="projects__item game" ><img src="img/pro-6.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Color Game</h3>
 					<p>HTML &sdot; CSS &sdot; JavaScript</p>
@@ -198,7 +240,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects__item app"><img src="img/pro-7.min.jpg" alt="project">
+			<div class="projects__item app"> <img src="img/pro-7.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Countdown Timer</h3>
 					<p>HTML &sdot; CSS &sdot; JS/ES6</p>
@@ -208,7 +250,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects__item app"><img src="img/pro-9.min.jpg" alt="project">
+			<div class="projects__item app"> <img src="img/pro-9.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">Stopwatch</h3>
 					<p>HTML &sdot; CSS &sdot; JS/ES6</p>
@@ -218,7 +260,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects__item app"><img src="img/pro-4.min.jpg" alt="project">
+			<div class="projects__item app"> <img src="img/pro-4.min.jpg" alt="project">
 				<div class="projects__item-wrapper">
 					<h3 class="projects__item-tit">To Do List</h3>
 					<p>HTML &sdot; CSS &sdot; jQuery</p>
@@ -273,6 +315,7 @@
 	</footer>
 
 	<script type="text/javascript" src="script/gator.min.js"></script>
+	<script type="text/javascript" src="script/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
 	<script type="text/javascript" src="script/filter.js"></script>
 	<!-- <script type="text/javascript" src="scripts/script.min.js"></script> -->

@@ -315,19 +315,22 @@ header {
 .header__nav {
   font-size: 1.4em;
   color: #2a2a2a;
-  position: fixed; }
+  position: fixed;
+  transition: 1s linear; }
 
 .header__nav-right {
   top: 45%;
   right: 20%;
   transform: translate(45%, -20%);
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  transition: 1s linear; }
 
 .header__nav-left {
   top: 4em;
   left: -0.25em;
   transform: translate(0%, 0%);
-  line-height: 1em; }
+  line-height: 1em;
+  transition: 1s linear; }
 
 .header__nav-left ul {
   padding-left: 1em; }
@@ -453,7 +456,8 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
 
 .hero:after {
   content: "";
@@ -527,7 +531,10 @@ body {
   border: 1px solid #f3c6c0; }
 
 .hero__title {
-  transform: translate(-80%, 40%); }
+  transition: 0.2s ease-out;
+  top: 45%;
+  right: 60%;
+  position: absolute; }
 
 .hero__h1 {
   color: #c0b283;
@@ -682,11 +689,13 @@ body {
 .projects__content {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
 
 .projects__btns {
-  width: 80%;
+  max-width: 90%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 75px; }
@@ -699,6 +708,7 @@ body {
   color: #c0b283;
   background-color: #fff;
   padding: 1em 2em;
+  margin: 0.5em;
   border: 1px solid #c0b283;
   transition: 0.2s ease-out; }
 
@@ -714,7 +724,8 @@ body {
   opacity: 0.8; }
 
 .projects__item {
-  position: relative; }
+  position: relative;
+  margin-bottom: 2em; }
 
 .projects__item:after {
   content: "";
@@ -844,5 +855,50 @@ body {
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 0 1em; }
+
+@media screen and (max-width: 960px) {
+  .hero__title {
+    font-size: 0.8em;
+    transform: translate(-60%, 40%);
+    transition: 0.2s ease-out; }
+
+  .skills__item {
+    min-width: 12em; }
+
+  .projects__btns {
+    width: 70%; }
+
+  .projects__btn {
+    margin: 0.5em;
+    padding: 1em 0.5em; }
+
+  .projects__item {
+    max-width: 90vw;
+    margin-bottom: 1em; }
+
+  .projects__item-tit {
+    padding: 0; } }
+@media screen and (max-width: 768px) {
+  .header__nav-right {
+    top: 30%;
+    left: 40%;
+    transform: translate(0%, -20%);
+    line-height: 1.4em; }
+
+  .contact__content {
+    flex-wrap: wrap; }
+
+  .contact__item {
+    height: auto;
+    width: 40%; }
+
+  .contact__item-tit {
+    font-size: 1.2em;
+    margin: 1em; }
+
+  .contact__item-data {
+    height: 2em;
+    margin-bottom: 2em;
+    margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

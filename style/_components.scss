@@ -50,8 +50,11 @@
 // HERO
 
 .hero__title {
-  //   font-weight: 400;
-  transform: translate(-80%, 40%);
+  // transform: translate(-80%, 40%);
+  transition: $trans;
+  top: 45%;
+  right: 60%;
+  position: absolute;
 }
 .hero__h1 {
   color: $gold;
@@ -219,10 +222,13 @@
 
 .projects__content {
   @include flex;
+  flex-wrap: wrap;
 }
 .projects__btns {
-  width: 80%;
+  // width: 80%;
+  max-width: 90%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 75px;
@@ -235,6 +241,7 @@
   color: $gold;
   background-color: #fff;
   padding: 1em 2em;
+  margin: 0.5em;
   border: 1px solid $gold;
   transition: $trans;
 }
@@ -254,6 +261,7 @@
 }
 .projects__item {
   position: relative;
+  margin-bottom: 2em;
 }
 .projects__item:after {
   content: "";
@@ -398,4 +406,54 @@
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 0 1em;
+}
+
+@media screen and (max-width: 960px) {
+  .hero__title {
+    font-size: 0.8em;
+    transform: translate(-60%, 40%);
+    transition: $trans;
+  }
+  .skills__item {
+    min-width: 12em;
+  }
+  .projects__btns {
+    width: 70%;
+  }
+  .projects__btn {
+    margin: 0.5em;
+    padding: 1em 0.5em;
+  }
+
+  .projects__item {
+    max-width: 90vw;
+    margin-bottom: 1em;
+  }
+  .projects__item-tit {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav-right {
+    top: 30%;
+    left: 40%;
+    transform: translate(0%, -20%);
+    line-height: 1.4em;
+  }
+  .contact__content {
+    flex-wrap: wrap;
+  }
+  .contact__item {
+    height: auto;
+    width: 40%;
+  }
+  .contact__item-tit {
+    font-size: 1.2em;
+    margin: 1em;
+  }
+  .contact__item-data {
+    height: 2em;
+    margin-bottom: 2em;
+    margin-top: 0;
+  }
 }

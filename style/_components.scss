@@ -9,6 +9,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: 80%;
   height: 150vh;
   z-index: -4;
   background-image: url(../img/bckg1.min.jpg);
@@ -52,9 +53,13 @@
 .hero__title {
   // transform: translate(-80%, 40%);
   transition: $trans;
-  top: 45%;
+  // top: 45%;
+  // right: 60%;
+  // position: absolute;
+  position: fixed;
+  top: 40vh;
   right: 60%;
-  position: absolute;
+  // transform: translate(0%, -40%);
 }
 .hero__h1 {
   color: $gold;
@@ -411,15 +416,24 @@
 @media screen and (max-width: 960px) {
   .hero__title {
     font-size: 0.8em;
-    transform: translate(-60%, 40%);
+    top: 50vh;
+    right: 50%;
     transition: $trans;
   }
+  // .header__nav {
+  //   font-size: 1.2em;
+  //   top: 50vh;
+  //   right: 10%;
+  // }
+  // .header__nav-onscroll {
+  // }
   .skills__item {
     min-width: 12em;
   }
   .projects__btns {
     width: 70%;
   }
+
   .projects__btn {
     margin: 0.5em;
     padding: 1em 0.5em;
@@ -434,12 +448,12 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .header__nav-right {
-    top: 30%;
-    left: 40%;
-    transform: translate(0%, -20%);
-    line-height: 1.4em;
-  }
+  // .header__nav {
+  //   top: 30%;
+  //   left: 40%;
+  //   transform: translate(0%, -20%);
+  //   line-height: 1.4em;
+  // }
   .contact__content {
     flex-wrap: wrap;
   }
@@ -455,5 +469,86 @@
     height: 2em;
     margin-bottom: 2em;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero:after {
+  }
+  .hero__title {
+    position: absolute;
+
+    font-size: 0.6em;
+    top: 14vh;
+    right: 50%;
+    transform: translateX(50%);
+    transition: 0.2s ease-out;
+  }
+  .hero__h3 {
+    transform: translateX(0);
+  }
+  .prlx__section {
+    height: 40vh;
+  }
+  .prlx__title {
+    font-size: 1.2em;
+  }
+  .prlx__title:after {
+    top: 5%;
+    left: 2%;
+    width: 95%;
+    height: 86%;
+  }
+  .about__title {
+    top: 0;
+    padding-bottom: 1em;
+    font-size: 2.4em;
+  }
+  .about__content {
+    font-size: 1.4em;
+  }
+  .skills__content {
+    border: none;
+    margin: 0 auto;
+    padding-top: 0;
+    justify-content: center;
+  }
+  .skills__item {
+    min-width: 8em;
+    max-height: 50%;
+  }
+  .skill__icon {
+    width: 6em;
+    height: 6em;
+  }
+  .skill__icon i {
+    font-size: 2.6em;
+  }
+  .projects__item img {
+    max-width: 70vw;
+  }
+  .projects__item-wrapper {
+    font-size: 0.8em;
+  }
+  .projects__btns {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .projects__btn {
+    width: 7em;
+    font-size: 1em;
+  }
+
+  .contact__item {
+    font-size: 1.2em;
+  }
+  .contact__item-data {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 960px), screen and (max-height: 1024px) {
+  .hero {
+    // height: 80vh;
   }
 }

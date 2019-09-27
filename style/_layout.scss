@@ -39,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .hero:after {
   content: "";
@@ -47,7 +48,9 @@ body {
   width: 5000px;
   height: 3500px;
   display: block;
-  position: absolute;
+  position: fixed;
+
+  // position: absolute;
   z-index: -2;
   background: $gray;
   transform: rotate(60deg) translate(-20%, 50%);
@@ -81,4 +84,13 @@ body {
   background-repeat: no-repeat;
   background-position: 0% 0px;
   z-index: 1;
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    height: 100vh;
+  }
+  .hero:after {
+    transform: rotate(150deg) translate(-20%, 49%);
+    position: absolute;
+  }
 }

@@ -124,6 +124,42 @@ header {
   opacity: 1;
 }
 
+@media screen and (max-width: 960px) {
+  .header__nav {
+    font-size: 1.2em;
+    top: 50vh;
+    right: 10%;
+  }
+  .header__nav-onscroll {
+    top: 4em;
+    right: 1em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__nav {
+    font-size: 1.2em;
+    top: 65vh;
+    right: 10%;
+  }
+  .header__nav .nav__item span {
+    opacity: 1;
+  }
+  .nav__item a::after {
+    border: 1px solid #2a2a2a;
+    top: 0.4em;
+  }
+  .header__logo-wrap img {
+    width: 2em;
+  }
+  .header__nav-onscroll {
+    top: 3.4em;
+    right: 0.7em;
+  }
+  .header__nav-onscroll .nav__item span {
+    opacity: 0;
+  }
+}
+
 // .nav__item {
 //   text-decoration: none;
 //   color: $gray;

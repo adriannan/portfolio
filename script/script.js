@@ -22,7 +22,23 @@ function changeNav() {
     nav.classList.remove("header__nav-onscroll");
   }
 }
+function currentSection() {
+  let navItems = [...document.querySelectorAll(".nav__item")];
+  navItems.forEach(item => {
+    let link = item.firstChild.getAttribute("name");
+    let sectOffTop = document.querySelector("#" + link).offsetTop;
+    let sectHeight = document.querySelector("#" + link).offsetHeight;
 
+    if (
+      sectOffTop < window.scrollY + window.innerHeight &&
+      sectOffTop + sectHeight - 50 > window.scrollY
+    ) {
+      item.classList.add("nav__item-current");
+    } else {
+      item.classList.remove("nav__item-current");
+    }
+  });
+}
 //  * * * * * MOVING HERO TITTLE ON SCROLL
 
 function setTranslate(xPos, yPos, el) {
@@ -33,6 +49,7 @@ function scrollLoop() {
   let yScroll = window.scrollY;
   let vHeight = window.innerHeight;
   changeNav();
+  currentSection();
   // function screenTest(e) {
   //   if (e.matches) {
   //     /* the viewport is 600 pixels wide or less */

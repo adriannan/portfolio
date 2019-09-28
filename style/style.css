@@ -328,7 +328,7 @@ header {
 
 .header__nav-onscroll .nav__item:hover {
   background-color: #fff;
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 1em; }
 
 .header__nav-onscroll {
@@ -372,8 +372,8 @@ header {
   width: 10em; }
 
 .header__nav .nav__item span {
-  opacity: 0;
-  display: block; }
+  display: block;
+  transform: translateX(40%) rotateY(90deg); }
 
 .nav__item:hover span {
   opacity: 1;
@@ -395,6 +395,9 @@ header {
   border: 1px solid #c0b283;
   right: -1em;
   top: 0.5em; }
+
+.header__nav-onscroll .nav__item-current a::after {
+  background-color: #c0b283; }
 
 .nav__item:hover a::after {
   background-color: #2a2a2a; }
@@ -422,6 +425,9 @@ header {
 
   .header__nav .nav__item span {
     opacity: 1; }
+
+  .header__nav-onscroll .nav__item:hover {
+    background-color: transparent; }
 
   .nav__item a::after {
     border: 1px solid #2a2a2a;
@@ -920,6 +926,20 @@ body {
     margin-bottom: 2em;
     margin-top: 0; } }
 @media screen and (max-width: 576px) {
+  #hero-parallax {
+    height: 100vh;
+    background-image: url(../img/m-bckg1.min.jpg); }
+
+  #skills-parallax,
+  #contact-parallax {
+    background-image: url(../img/m-bckg2.min.jpg); }
+
+  #projects-parallax {
+    background-image: url(../img/m-bckg3.min.jpg); }
+
+  .prlx-footer {
+    background-image: url(../img/m-bckg2.min.jpg); }
+
   .hero__title {
     position: absolute;
     font-size: 0.6em;

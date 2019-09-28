@@ -473,8 +473,21 @@
 }
 
 @media screen and (max-width: 576px) {
-  .hero:after {
+  #hero-parallax {
+    height: 100vh;
+    background-image: url(../img/m-bckg1.min.jpg);
   }
+  #skills-parallax,
+  #contact-parallax {
+    background-image: url(../img/m-bckg2.min.jpg);
+  }
+  #projects-parallax {
+    background-image: url(../img/m-bckg3.min.jpg);
+  }
+  .prlx-footer {
+    background-image: url(../img/m-bckg2.min.jpg);
+  }
+
   .hero__title {
     position: absolute;
 

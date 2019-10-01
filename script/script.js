@@ -1,12 +1,15 @@
 const prlxDivs = [...document.querySelectorAll(".prlx__section")];
 
 const nav = document.querySelector("#header-nav");
+// const navMobile = document.querySelector(".header__nav-mobile");
+const hamburger = document.querySelector(".header__hamburger");
 const logo = document.querySelector(".header__logo");
 
 // * * * * * match media
 
 let mql = window.matchMedia("(max-width: 960px)");
-var mobileViewport = window.matchMedia("screen and (max-width: 480px)");
+let mobileViewport = window.matchMedia("(max-width: 576px)");
+
 // if (mql.matches) document.querySelector(".hero__title").innerText = mql.media;
 // var mql = window.matchMedia("(max-width: 600px)");
 
@@ -22,23 +25,50 @@ function changeNav() {
     nav.classList.remove("header__nav-onscroll");
   }
 }
+function showHamburger() {
+  if (document.querySelector("#about").getBoundingClientRect().top < 10) {
+    hamburger.style.display = "flex";
+    // nav.style.visibility = "hidden";
+  } else {
+    hamburger.style.display = "none";
+    // nav.style.visibility = "visible";
+  }
+}
 function currentSection() {
   let navItems = [...document.querySelectorAll(".nav__item")];
+  let navBtns = [...document.querySelectorAll(".hamburger__line")];
   navItems.forEach(item => {
     let link = item.firstChild.getAttribute("name");
     let sectOffTop = document.querySelector("#" + link).offsetTop;
     let sectHeight = document.querySelector("#" + link).offsetHeight;
+    let btn = document.querySelector(`div[name=${link}]`);
 
     if (
       sectOffTop < window.scrollY + window.innerHeight &&
       sectOffTop + sectHeight - 50 > window.scrollY
     ) {
       item.classList.add("nav__item-current");
+      btn.classList.add("hamburger__line-active");
     } else {
       item.classList.remove("nav__item-current");
+      btn.classList.remove("hamburger__line-active");
     }
   });
 }
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("header__nav-mobile");
+  hamburger.style.display = "none";
+});
+if (document.querySelector("#about").getBoundingClientRect().top < -10) {
+  nav.addEventListener("click", () => {
+    setTimeout(function() {
+      nav.classList.toggle("header__nav-mobile");
+      hamburger.style.display = "flex";
+    }, 100);
+  });
+}
+
 //  * * * * * MOVING HERO TITTLE ON SCROLL
 
 function setTranslate(xPos, yPos, el) {
@@ -48,7 +78,7 @@ function setTranslate(xPos, yPos, el) {
 function scrollLoop() {
   let yScroll = window.scrollY;
   let vHeight = window.innerHeight;
-  changeNav();
+  mobileViewport.matches ? showHamburger() : changeNav();
   currentSection();
   // function screenTest(e) {
   //   if (e.matches) {

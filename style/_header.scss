@@ -211,6 +211,9 @@ header {
   .header__nav-mobile .nav__item span {
     color: $gold;
   }
+  .header__nav-cleardot .nav__item a::after {
+    background-color: transparent;
+  }
   .header__nav-mobile .nav__item a::after {
     display: none;
   }
@@ -232,13 +235,16 @@ header {
   .header__nav-mobile .nav__item:active span {
     color: #fff;
   }
+  .header__nav .nav__item:active a:after {
+    background-color: $gray;
+  }
   .header__nav-mobile .nav__item:active {
     background-color: $gold;
     opacity: 0.8;
     -webkit-tap-highlight-color: transparent;
   }
   .header__hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 1em;
@@ -256,7 +262,7 @@ header {
     right: 0.7em;
   }
 
-  .hamburger__line {
+  .hamburger__dot {
     width: 0.5em;
     height: 0.5em;
     border-radius: 48%;
@@ -268,7 +274,7 @@ header {
     // width: 1em;
     transition-duration: 150ms;
   }
-  .hamburger__line-active {
+  .hamburger__dot-active {
     background-color: $gold;
   }
 }

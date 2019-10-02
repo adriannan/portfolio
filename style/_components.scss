@@ -214,14 +214,6 @@
   height: 100%;
   color: $d-pink;
 }
-// .skill-icon + h3 {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 25vw;
-//   text-align: center;
-//   padding: 0;
-// }
 
 //  PROJECTS SECT
 
@@ -364,12 +356,6 @@
   justify-content: space-around;
 }
 
-// .contact__item-link[href*="mail"] + p {
-//   align-items: flex-start;
-//   flex-wrap: wrap;
-//   max-width: 50%;
-// }
-
 .contact__item i {
   font-size: 2em;
 }
@@ -420,13 +406,7 @@
     right: 50%;
     transition: $trans;
   }
-  // .header__nav {
-  //   font-size: 1.2em;
-  //   top: 50vh;
-  //   right: 10%;
-  // }
-  // .header__nav-onscroll {
-  // }
+
   .skills__item {
     min-width: 12em;
   }
@@ -476,29 +456,28 @@
   #hero-parallax {
     height: 100vh;
     background-image: url(../img/m-bckg1.min.jpg);
+    background-attachment: scroll;
   }
   #skills-parallax,
-  #contact-parallax {
-    background-image: url(../img/m-bckg2.min.jpg);
-  }
-  #projects-parallax {
-    background-image: url(../img/m-bckg3.min.jpg);
-  }
+  #contact-parallax,
+  #projects-parallax,
   .prlx-footer {
-    background-image: url(../img/m-bckg2.min.jpg);
+    background-image: none;
   }
 
   .hero__title {
     position: absolute;
 
-    font-size: 0.6em;
-    top: 14vh;
+    font-size: 0.9em;
+    top: 12vh;
     right: 50%;
     transform: translateX(50%);
     transition: 0.2s ease-out;
   }
   .hero__h3 {
     transform: translateX(0);
+    margin-top: 1.2em;
+    text-align: center;
   }
   .prlx__section {
     height: 40vh;
@@ -557,11 +536,5 @@
   }
   .contact__item-data {
     font-size: 0.8em;
-  }
-}
-
-@media screen and (max-width: 960px), screen and (max-height: 1024px) {
-  .hero {
-    // height: 80vh;
   }
 }

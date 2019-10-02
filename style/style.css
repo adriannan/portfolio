@@ -410,6 +410,9 @@ header {
 .nav__item:hover a {
   opacity: 1; }
 
+.header__hamburger {
+  display: none; }
+
 @media screen and (max-width: 960px) {
   .header__nav {
     font-size: 1.2em;
@@ -425,7 +428,7 @@ header {
 
   .header__nav {
     font-size: 1.2em;
-    top: 65vh;
+    top: 55vh;
     right: 10%;
     position: absolute; }
 
@@ -603,12 +606,29 @@ body {
   z-index: 1; }
 
 @media screen and (max-width: 576px) {
+  body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(../img/bckg3.min.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
   .hero {
     height: 100vh; }
 
   .hero:after {
-    transform: rotate(150deg) translate(-20%, 49%);
-    position: absolute; } }
+    transform: rotate(-38deg) translate(0%, -41%);
+    position: absolute;
+    height: 600px;
+    width: 1500px; } }
 #hero-parallax {
   content: "";
   width: 100%;
@@ -1023,28 +1043,27 @@ body {
 @media screen and (max-width: 576px) {
   #hero-parallax {
     height: 100vh;
-    background-image: url(../img/m-bckg1.min.jpg); }
+    background-image: url(../img/m-bckg1.min.jpg);
+    background-attachment: scroll; }
 
   #skills-parallax,
-  #contact-parallax {
-    background-image: url(../img/m-bckg2.min.jpg); }
-
-  #projects-parallax {
-    background-image: url(../img/m-bckg3.min.jpg); }
-
+  #contact-parallax,
+  #projects-parallax,
   .prlx-footer {
-    background-image: url(../img/m-bckg2.min.jpg); }
+    background-image: none; }
 
   .hero__title {
     position: absolute;
-    font-size: 0.6em;
-    top: 14vh;
+    font-size: 0.9em;
+    top: 12vh;
     right: 50%;
     transform: translateX(50%);
     transition: 0.2s ease-out; }
 
   .hero__h3 {
-    transform: translateX(0); }
+    transform: translateX(0);
+    margin-top: 1.2em;
+    text-align: center; }
 
   .prlx__section {
     height: 40vh; }

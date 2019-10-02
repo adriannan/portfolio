@@ -96,9 +96,6 @@ header {
   transition: 0.2s ease-in opacity, 0.1s ease-out transform;
 }
 
-// .nav__item a:hover::after {
-//   opacity: 1;
-// }
 .nav__item a::after {
   content: "";
   width: 0.5em;
@@ -117,9 +114,7 @@ header {
   right: -1em;
   top: 0.5em;
 }
-// .nav__item a::after {
-//   background-color: transparent;
-// }
+
 .header__nav-onscroll .nav__item-current a::after {
   background-color: $gold;
 }
@@ -134,7 +129,9 @@ header {
 .nav__item:hover a {
   opacity: 1;
 }
-
+.header__hamburger {
+  display: none;
+}
 @media screen and (max-width: 960px) {
   .header__nav {
     font-size: 1.2em;
@@ -152,7 +149,7 @@ header {
   }
   .header__nav {
     font-size: 1.2em;
-    top: 65vh;
+    top: 55vh;
     right: 10%;
     position: absolute;
   }

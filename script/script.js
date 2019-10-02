@@ -1,7 +1,6 @@
 const prlxDivs = [...document.querySelectorAll(".prlx__section")];
 
 const nav = document.querySelector("#header-nav");
-// const navMobile = document.querySelector(".header__nav-mobile");
 const hamburger = document.querySelector(".header__hamburger");
 const logo = document.querySelector(".header__logo");
 
@@ -9,9 +8,6 @@ const logo = document.querySelector(".header__logo");
 
 let mql = window.matchMedia("(max-width: 960px)");
 let mobileViewport = window.matchMedia("(max-width: 576px)");
-
-// if (mql.matches) document.querySelector(".hero__title").innerText = mql.media;
-// var mql = window.matchMedia("(max-width: 600px)");
 
 function changeNav() {
   if (
@@ -82,14 +78,6 @@ function scrollLoop() {
   let vHeight = window.innerHeight;
   mobileViewport.matches ? showHamburger() : changeNav();
   currentSection();
-  // function screenTest(e) {
-  //   if (e.matches) {
-  //     /* the viewport is 600 pixels wide or less */
-  //     setTranslate(yScroll * -1, yScroll, document.querySelector("#hero"));
-  //   }
-  // }
-
-  // mql.addListener(screenTest);
   if (
     document.querySelector("#about").getBoundingClientRect().top > 0 &&
     mql.matches == false
@@ -98,13 +86,14 @@ function scrollLoop() {
   }
 
   // parallax function
-
-  for (let i = 0; i < prlxDivs.length; i++) {
-    let divOffTop = prlxDivs[i].offsetTop;
-    let divHeight = prlxDivs[i].offsetHeight;
-    if (divOffTop < yScroll + vHeight && divOffTop + divHeight > yScroll) {
-      prlxDivs[i].style.backgroundPositionY =
-        Math.round(((divOffTop - yScroll) * 3) / 8) + "px";
+  if (!mobileViewport.matches) {
+    for (let i = 0; i < prlxDivs.length; i++) {
+      let divOffTop = prlxDivs[i].offsetTop;
+      let divHeight = prlxDivs[i].offsetHeight;
+      if (divOffTop < yScroll + vHeight && divOffTop + divHeight > yScroll) {
+        prlxDivs[i].style.backgroundPositionY =
+          Math.round(((divOffTop - yScroll) * 3) / 8) + "px";
+      }
     }
   }
 }
@@ -170,3 +159,5 @@ ScrollReveal().reveal(".projects__content", {
   origin: "bottom",
   distance: "200px"
 });
+
+// mobile imgs - bg

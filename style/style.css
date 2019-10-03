@@ -1042,10 +1042,7 @@ body {
     margin-top: 0; } }
 @media screen and (max-width: 576px) {
   #hero-parallax {
-    height: 100vh;
-    z-index: 1;
-    background-image: url(../img/m-bckg1.min.jpg);
-    background-attachment: scroll; }
+    display: none; }
 
   #skills-parallax,
   #contact-parallax,

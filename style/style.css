@@ -606,7 +606,16 @@ body {
   z-index: 1; }
 
 @media screen and (max-width: 576px) {
-  body:before {
+  .body-prlx {
+    width: 150vw;
+    height: 150vh;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100; }
+
+  .body-prlx:before {
     content: "";
     display: block;
     position: fixed;
@@ -614,7 +623,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -10;
+    z-index: -100;
     background: url(../img/bckg3.min.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -622,7 +631,8 @@ body {
     background-size: cover; }
 
   .hero {
-    height: 100vh; }
+    height: 100vh;
+    z-index: 5; }
 
   .hero:after {
     transform: rotate(-38deg) translate(0%, -41%);
@@ -986,19 +996,18 @@ body {
   border-top: 1px solid #c0b283;
   position: relative;
   z-index: 5;
-  overflow: hidden; }
-
-.prlx-footer {
+  width: 100vw;
+  overflow: hidden;
   background-image: url(../img/bckg2.min.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   max-height: 10vh;
-  transform: scale(1.1); }
+  background-attachment: fixed; }
 
 .copyright {
   position: relative;
   z-index: 5;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 0 1em; }
 
 @media screen and (max-width: 960px) {
@@ -1043,13 +1052,14 @@ body {
 @media screen and (max-width: 576px) {
   #hero-parallax {
     height: 100vh;
+    z-index: 1;
     background-image: url(../img/m-bckg1.min.jpg);
     background-attachment: scroll; }
 
   #skills-parallax,
   #contact-parallax,
   #projects-parallax,
-  .prlx-footer {
+  .footer {
     background-image: none; }
 
   .hero__title {
@@ -1091,8 +1101,9 @@ body {
     padding-top: 0;
     justify-content: center; }
 
-  .skills__item {
-    min-width: 40%; }
+  .skills__item:not(:last-child) {
+    min-width: 40%;
+    border-bottom: 1px solid rgba(243, 198, 192, 0.5); }
 
   .skills__item-capt {
     width: 90%;

@@ -382,20 +382,19 @@
   border-top: 1px solid $gold;
   position: relative;
   z-index: 5;
+  width: 100vw;
   overflow: hidden;
-}
-.prlx-footer {
   background-image: url(../img/bckg2.min.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   max-height: 10vh;
-  transform: scale(1.1);
+  background-attachment: fixed;
 }
 
 .copyright {
   position: relative;
   z-index: 5;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 0 1em;
 }
 
@@ -455,14 +454,18 @@
 @media screen and (max-width: 576px) {
   #hero-parallax {
     height: 100vh;
+    z-index: 1;
     background-image: url(../img/m-bckg1.min.jpg);
     background-attachment: scroll;
   }
   #skills-parallax,
   #contact-parallax,
   #projects-parallax,
-  .prlx-footer {
+  .footer {
     background-image: none;
+  }
+  .footer {
+    // background-color: #fff;
   }
 
   .hero__title {
@@ -505,8 +508,9 @@
     padding-top: 0;
     justify-content: center;
   }
-  .skills__item {
+  .skills__item:not(:last-child) {
     min-width: 40%;
+    border-bottom: 1px solid rgba(243, 198, 192, 0.5);
   }
   .skills__item-capt {
     width: 90%;
@@ -515,6 +519,7 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
+
   .skill__icon {
     width: 5em;
     height: 5em;
@@ -532,6 +537,7 @@
     justify-content: center;
     top: 0;
   }
+
   .skill__title {
     width: 5em;
     text-align: center;

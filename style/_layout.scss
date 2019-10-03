@@ -86,16 +86,7 @@ body {
   z-index: 1;
 }
 @media screen and (max-width: 576px) {
-  .body-prlx {
-    width: 150vw;
-    height: 150vh;
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -100;
-  }
-  .body-prlx:before {
+  body:before {
     content: "";
     display: block;
     position: fixed;

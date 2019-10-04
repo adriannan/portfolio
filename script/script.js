@@ -97,10 +97,10 @@ function scrollLoop() {
     }
   }
 }
-
+Gator(window).on("resize", () => {
+  if (mobileViewport.matches) nav.classList.remove("header__nav-onscroll");
+});
 Gator(window).on("scroll", scrollLoop);
-
-// window.addEventListener("DOMContentLoaded", scrollLoop);
 
 //  * * * * * MORE INFORMATION ABOUT
 

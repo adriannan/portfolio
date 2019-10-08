@@ -141,7 +141,7 @@
   height: 18vw;
   max-height: 18em;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 40%;
   border-radius: 50%;
   padding: 3px;
   margin: 1em;
@@ -446,6 +446,13 @@
   //   transform: translate(0%, -20%);
   //   line-height: 1.4em;
   // }
+  .about__photo img {
+    width: 30vw;
+    height: 30vw;
+  }
+  .about__photo:after {
+    top: 30%;
+  }
   .contact__content {
     flex-wrap: wrap;
   }
@@ -511,6 +518,10 @@
   }
   .about__content {
     font-size: 1.4em;
+  }
+  .about__photo img {
+    width: 45vw;
+    height: 45vw;
   }
   .skills__content {
     border: none;

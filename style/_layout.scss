@@ -58,6 +58,7 @@ body {
 
 .about {
   @extend .container;
+  overflow: hidden;
 }
 .skills {
   @extend .container;

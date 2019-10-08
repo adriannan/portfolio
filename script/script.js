@@ -1,5 +1,4 @@
 const prlxDivs = [...document.querySelectorAll(".prlx__section")];
-
 const nav = document.querySelector("#header-nav");
 const hamburger = document.querySelector(".header__hamburger");
 const logo = document.querySelector(".header__logo");
@@ -8,6 +7,48 @@ const logo = document.querySelector(".header__logo");
 
 let mql = window.matchMedia("(max-width: 960px)");
 let mobileViewport = window.matchMedia("(max-width: 576px)");
+
+const typeText = document.querySelector(".typing");
+// const txt = [
+//   "się uczyć   ",
+//   "tworzyć   ",
+//   "poznawać   ",
+//   "się rozwijać   ",
+//   "programować :)"
+// ];
+const txt = ["tworzyć", "się rozwijać", "programować :)"];
+let typingActive = false;
+let indexText = 0;
+let indexLetter = -15;
+
+const addLetter = () => {
+  if (indexLetter >= 0) {
+    typeText.textContent += txt[indexText][indexLetter];
+  }
+  indexLetter++;
+
+  if (indexText === txt.length) {
+    return setTimeout(() => {
+      typeText.textContent = txt[2];
+      indexText = 0;
+      typingActive = false;
+      // setTimeout(typing, 2000);
+    }, 10);
+  }
+  if (indexLetter === txt[indexText].length) {
+    return setTimeout(() => {
+      indexText++;
+      indexLetter = -15;
+      addLetter();
+      typeText.textContent = "";
+    }, 500);
+  }
+  setTimeout(addLetter, 50);
+};
+function typing() {
+  typeText.textContent = "";
+  addLetter();
+}
 
 function changeNav() {
   if (
@@ -96,35 +137,37 @@ function scrollLoop() {
       }
     }
   }
+  let aboutOffTop = document.querySelector("#about").offsetTop;
+  let aboutHeight = document.querySelector("#about").offsetHeight;
+  if (
+    aboutOffTop / 2 < window.scrollY &&
+    aboutOffTop + aboutHeight > window.scrollY &&
+    !typingActive
+  ) {
+    typingActive = true;
+    setTimeout(typing, 2000);
+    // typing();
+  }
 }
 Gator(window).on("resize", () => {
   if (mobileViewport.matches) nav.classList.remove("header__nav-onscroll");
 });
 Gator(window).on("scroll", scrollLoop);
 
-//  * * * * * MORE INFORMATION ABOUT
-
-document.getElementById("about-button").addEventListener("click", function() {
-  document
-    .getElementById("about-more")
-    .classList.toggle("about__caption-visible");
-  if (this.innerHTML == "Więcej") {
-    this.innerHTML = " &and;	 ";
-    this.style.fontStyle = "normal";
-  } else {
-    this.innerHTML = "Więcej";
-  }
-});
-
 //  * * * * * SCROLL
 
-ScrollReveal().reveal(".about__caption", {
+ScrollReveal().reveal(".about__caption ", {
+  reset: true,
   delay: 300,
+  duration: 800,
   origin: "bottom",
   distance: "200px"
+  // scale: 0.5,
+  // origin: "bottom",
+  // distance: "0px"
 });
 ScrollReveal().reveal(".prlx__title", {
-  // reset: true,
+  reset: true,
   // delay: 300,
   duration: 800,
   scale: 0.5,
@@ -145,7 +188,9 @@ ScrollReveal().reveal(".contact__item-link i", {
   duration: 800
 });
 
-ScrollReveal().reveal(".skills__item, .projects__btn", {
+ScrollReveal().reveal(".skills__item, .projects__btn, .about__photo img", {
+  reset: true,
+
   delay: 300,
   origin: "top",
   scale: 0.5,

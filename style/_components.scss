@@ -15,12 +15,14 @@
   background-image: url(../img/bckg1.min.jpg);
 }
 
-#skills-parallax,
-#contact-parallax {
+#skills-parallax {
   background-image: url(../img/bckg2.min.jpg);
 }
 #projects-parallax {
   background-image: url(../img/bckg3.min.jpg);
+}
+#contact-parallax {
+  background-image: url(../img/bckg1.min.jpg);
 }
 .prlx__title {
   @include fontStyle;
@@ -51,15 +53,11 @@
 // HERO
 
 .hero__title {
-  // transform: translate(-80%, 40%);
+  font-size: 1.2em;
   transition: $trans;
-  // top: 45%;
-  // right: 60%;
-  // position: absolute;
   position: fixed;
   top: 40vh;
   right: 60%;
-  // transform: translate(0%, -40%);
 }
 .hero__h1 {
   color: $gold;
@@ -90,11 +88,11 @@
 
 .about__title {
   @include fontStyle;
-  top: 1.4em;
+  top: 0;
   color: $gold;
   font-size: 2.6em;
   position: relative;
-  padding-bottom: 2em;
+  // padding-bottom: 1em;
 }
 .about__title::after {
   content: "";
@@ -113,19 +111,34 @@
   font-size: 1.4em;
   text-align: center;
   line-height: 2em;
+  // overflow: hidden;
 }
-.about__caption-visible {
-  display: none;
-}
+
 .about__photo {
   @include flex;
+  width: 100%;
+  position: relative;
+  // overflow: hidden;
+}
+.about__photo:after {
+  content: "";
+  width: 120vw;
+  height: 3em;
+  background-image: url(../img/bckg1.min.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  // background-position-x: end;
+  z-index: -1;
+  // box-shadow: 0 0 0.5em #c0b283 inset;
+  // border: 1px solid #c0b283;
+  position: absolute;
+  top: 40%;
+  left: -20%;
 }
 .about__photo img {
-  // width: 100%;
-  // height: 100%;
-  width: 20vw;
+  width: 18vw;
   max-width: 18em;
-  height: 20vw;
+  height: 18vw;
   max-height: 18em;
   object-fit: cover;
   object-position: center 20%;
@@ -384,9 +397,9 @@
   z-index: 5;
   width: 100vw;
   overflow: hidden;
-  background-image: url(../img/bckg2.min.jpg);
+  background-image: url(../img/bckg1.min.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   max-height: 10vh;
   background-attachment: fixed;
 }

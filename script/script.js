@@ -93,20 +93,22 @@ function currentSection() {
   });
 }
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("header__nav-mobile");
-  hamburger.style.display = "none";
-});
+if (mobileViewport.matches) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("header__nav-mobile");
+    hamburger.style.display = "none";
+  });
 
-nav.addEventListener("click", () => {
-  if (document.querySelector("#about").getBoundingClientRect().top < -10) {
-    setTimeout(function() {
-      nav.classList.toggle("header__nav-mobile");
-      hamburger.style.display = "flex";
-      nav.classList.add("header__nav-cleardot");
-    }, 100);
-  }
-});
+  nav.addEventListener("click", () => {
+    if (document.querySelector("#about").getBoundingClientRect().top < -10) {
+      setTimeout(function() {
+        nav.classList.toggle("header__nav-mobile");
+        hamburger.style.display = "flex";
+        nav.classList.add("header__nav-cleardot");
+      }, 100);
+    }
+  });
+}
 
 //  * * * * * MOVING HERO TITTLE ON SCROLL
 
@@ -145,7 +147,7 @@ function scrollLoop() {
     !typingActive
   ) {
     typingActive = true;
-    setTimeout(typing, 2000);
+    setTimeout(typing, 1500);
     // typing();
   }
 }
@@ -156,16 +158,14 @@ Gator(window).on("scroll", scrollLoop);
 
 //  * * * * * SCROLL
 
-ScrollReveal().reveal(".about__caption ", {
-  reset: true,
-  delay: 300,
-  duration: 800,
-  origin: "bottom",
-  distance: "200px"
-  // scale: 0.5,
-  // origin: "bottom",
-  // distance: "0px"
-});
+if (!mobileViewport.matches) {
+  ScrollReveal().reveal(".about__caption ", {
+    delay: 300,
+    duration: 800,
+    origin: "bottom",
+    distance: "200px"
+  });
+}
 ScrollReveal().reveal(".prlx__title", {
   reset: true,
   // delay: 300,
@@ -189,8 +189,6 @@ ScrollReveal().reveal(".contact__item-link i", {
 });
 
 ScrollReveal().reveal(".skills__item, .projects__btn, .about__photo img", {
-  reset: true,
-
   delay: 300,
   origin: "top",
   scale: 0.5,

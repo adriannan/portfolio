@@ -458,9 +458,6 @@ header {
     border: 1px solid #2a2a2a;
     top: 0.4em; }
 
-  .header__logo {
-    display: none; }
-
   .header__logo-wrap img {
     width: 2em; }
 
@@ -1103,21 +1100,59 @@ body {
     height: 40vh; }
 
   .prlx__title {
-    font-size: 1.2em; }
+    font-size: 1.8em;
+    padding: 1em;
+    width: 80%;
+    text-align: center; }
 
   .prlx__title:after {
-    top: 5%;
+    top: 7%;
     left: 2%;
     width: 95%;
-    height: 86%; }
+    height: 83%; }
+
+  .about {
+    background: transparent;
+    padding: 0; }
 
   .about__title {
     top: 0;
-    padding-bottom: 1em;
+    width: 100%;
+    padding: 2em 0;
+    margin: 0;
+    background-color: #fff;
+    text-align: center;
     font-size: 2.4em; }
 
+  .about__title::after {
+    width: 20%;
+    top: 3.4em;
+    left: 40%; }
+
   .about__content {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    width: 100%; }
+
+  .about__caption p:first-of-type {
+    width: 80%;
+    background: #fff;
+    padding: 0 10%; }
+
+  .about__caption p {
+    width: 80%;
+    margin: 0;
+    padding: 10%;
+    background: #fff; }
+
+  .about__caption p:last-of-type {
+    padding-bottom: 3em; }
+
+  .about__photo:after {
+    top: 0;
+    height: 45%;
+    background: none;
+    border-top: 3em solid #fff;
+    border-bottom: 3em solid #fff; }
 
   .about__photo img {
     width: 45vw;
